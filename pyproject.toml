@@ -1,0 +1,29 @@
+[project]
+name = "first-aid-chatbot"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "KoteshwarChinnolla", email = "98650844+KoteshwarChinnolla@users.noreply.github.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "duckduckgo-search>=8.1.1",
+    "httpx>=0.28.1",
+    "ipykernel>=6.29.5",
+    "langchain-community>=0.3.27",
+    "langchain-groq>=0.3.6",
+    "langchain-mcp-adapters>=0.1.9",
+    "langgraph>=0.5.2",
+    "mcp[cli]>=1.11.0",
+    "pandas>=2.3.1",
+    "redis[search]>=4.2.0",
+    "sentence-transformers>=5.0.0",
+]
+
+[project.scripts]
+first-aid-chatbot = "first_aid_chatbot:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
