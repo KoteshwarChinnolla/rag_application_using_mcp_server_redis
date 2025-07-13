@@ -7,12 +7,12 @@ load_dotenv()
 
 import asyncio
 
-async def main():
+async def mcp_server(message: str):
     client=MultiServerMCPClient(
         {
             "websearch":{
                 "command":"python",
-                "args":["webSearch.py"],
+                "args":["src/first_aid_chatbot/webSearch.py"],
                 "transport":"stdio",
             },
             "document_search": {
@@ -31,12 +31,10 @@ async def main():
         model,tools
     )
 
-    message = input("Enter your message: ")
-
     math_response = await agent.ainvoke(
         {"messages": [{"role": "user", "content": message}]}
     )
 
-    print("Math response:", math_response['messages'][-1].content)
+    return math_response['messages'][-1].content
 
-asyncio.run(main())
+# asyncio.run(main())

@@ -1,4 +1,13 @@
-"mcp[cli]"
+mcp[cli]
 httpx
 duckduckgo-search
 langchain-community
+langchain-groq
+langchain-mcp-adapters
+langgraph
+pandas
+redis[search]
+sentence-transformers
+python-dotenv
+fastapi
+uvicorn
